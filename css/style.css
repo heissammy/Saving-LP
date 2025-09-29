@@ -140,7 +140,7 @@ ul.nav-item {
 .partners {
   display: flex;
   justify-content: space-between;
-  gap: 11rem;
+  gap: 8rem;
   padding-bottom: 1.5rem;
   align-items: center;
 
@@ -398,6 +398,8 @@ li::marker {
   p {
     font-size: 22px;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
@@ -589,10 +591,15 @@ li::marker {
   background: #22c55e;
 }
 
-/* What Users Are Saying Header */
-.section-header {
- 
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
 }
+
+/* What Users Are Saying Header */
+
 
 .section-header h2 {
   font-size: 32px;
@@ -689,6 +696,7 @@ li::marker {
 }
 
 /* Footer Styles */
+/* Footer Styles */
 .footer {
   background-color: #0e2a14;
   color: #fff;
@@ -769,8 +777,10 @@ li::marker {
   margin-top: 40px;
   font-size: 14px;
   color: #aaa;
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 15px;
 }
+
 
 /* Responsive Design  */
 
@@ -799,5 +809,304 @@ li::marker {
 
   .section-header p {
     margin: 0 auto;
+  }
+
+  /* Hamburger base styles */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: block;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile Navbar with hamburger */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-item {
+    display: none;
+    width: 100%;
+    background: #0e4023;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .nav-item li {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-item a {
+    padding: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    font-size: 1rem;
+  }
+
+  .buttons {
+    display: none; /* hide buttons initially on mobile */
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+}
+
+}
+
+
+/* ===============================
+   Responsive additions — tweaked
+   Tablet: <= 1024px, Mobile: <= 600px
+   =============================== */
+
+/* -----------------------
+   Tablet adjustments
+   ----------------------- */
+@media (max-width: 1024px) {
+
+  /* header / navbar */
+  header { padding-inline: 2rem; }
+  .navbar { padding-block: 1.25rem; }
+  .logo { font-size: 1.85rem; }
+
+  /* nav items: keep horizontal but reduce spacing */
+  .nav-item { margin: 0; }
+  .nav-item li { display: flex; gap: 1.25rem; align-items: center; }
+  .nav-item a { font-size: 0.98rem; padding: 4px 0; }
+
+  .buttons { gap: 0.75rem; }
+  .login-btn, .get-started { padding: 6px 12px; font-size: 0.95rem; }
+
+  /* hero */
+  .hero h1 {
+    padding-inline: 6rem !important;
+    font-size: 2.0rem !important;
+    line-height: 2.6rem !important;
+    text-align: center;
+  }
+  .hero p {
+    padding-inline: 5rem !important;
+    font-size: 1.15rem !important;
+    color: #dcdcdc;
+  }
+  .phone img { max-width: 320px; height: auto; padding-bottom: 1.5rem; }
+
+  .store-buttons { 
+    gap: 1.25rem; padding-bottom: 1.25rem; 
+  }
+  .app-store-badge { 
+    width: 9rem; 
+  }
+
+  /* partners */
+  .partners { 
+    gap: 6rem;
+    padding-inline: 1rem; 
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .partners img { 
+    max-height: 32px; 
+    object-fit: contain;
+    width: 11rem;
+  }
+
+  /* features */
+  .features { padding: 1.75rem 3rem; }
+  .feature-texts p { padding-inline: 3rem; font-size: 1.125rem; }
+  .feature-cards { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+  .card { width: calc(50% - 0.75rem); max-width: 100%; box-sizing: border-box; }
+
+  /* split sections */
+  .split, .split-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2.5rem 3rem;
+    align-items: center;
+  }
+  .split img, .split-2 img { width: 380px; max-width: 45%; height: auto; }
+  .text, .text-2 { width: auto; max-width: 52%; }
+
+  /* split text sizing */
+  .split h3, .text-2 h3 { font-size: 1.65rem; line-height: 2.2rem; }
+  .split p, .text-2 p { font-size: 1rem; line-height: 1.6rem; }
+
+  /* process/cards */
+  .feature-cards-2 { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; padding-top: 30px; }
+  .feature-cards-2 .card { width: calc(33.333% - 0.75rem); min-width: 220px; }
+
+  /* testimonials */
+  .testimonials-section { padding: 40px 2rem; gap: 1.5rem; flex-direction: column; }
+  .testimonial-card.featured { width: 100%; display: flex; flex-direction: column; gap: 1rem; transform: none; }
+
+  /* footer minor */
+  .footer-container { padding-inline: 1rem; }
+}
+
+/* -----------------------
+   Mobile adjustments + Tweaks
+   ----------------------- */
+@media (max-width: 600px) {
+
+  /* header / navbar stacking */
+  header { padding-inline: 1rem; padding-block: 1rem; }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #0e4023;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .logo { font-size: 1.5rem; }
+
+  /* nav links stack vertically beneath the logo */
+  .nav-item { width: 100%; }
+  .nav-item li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    width: 100%;
+  }
+  .nav-item li a {
+    display: block;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.05);
+  }
+  .nav-item a:hover { background: rgba(255,255,255,0.15); }
+
+  /* buttons stack */
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: center;
+    margin-top: 0.25rem;
+  }
+  .login-btn, .get-started {
+    width: 90%;
+    max-width: 320px;
+    padding: 8px 0;
+  }
+
+  /* hero */
+  .hero h1 {
+    padding-inline: 0.75rem !important;
+    font-size: 1.4rem !important;
+    line-height: 1.8rem !important;
+    text-align: center;
+  }
+  .hero p {
+    font-size: 0.95rem !important;
+    line-height: 1.4rem;
+    padding-inline: 0.75rem !important;
+    color: #e8e8e8;
+  }
+  .store-buttons { flex-direction: column; gap: 0.75rem; }
+  .store-buttons img { width: 75%; max-width: 200px; }
+
+  .phone img { max-width: 240px; }
+
+  /* partners */
+  .partners {
+    gap: 1rem;
+    padding-inline: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .partners img { max-height: 28px; }
+
+  /* features -> single column */
+  .features { padding: 1.25rem 1rem; }
+  .feature-texts p { padding-inline: 0.75rem; font-size: 1rem; }
+  .feature-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .feature-cards .card {
+    width: 100%;
+    max-width: 350px;
+    padding: 1.5rem;
+  }
+
+  /* split sections -> stack */
+  .split, .split-2 {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    align-items: center;
+  }
+  .split img, .split-2 img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .split h3, .split-2 h3 { font-size: 1.25rem; line-height: 1.6rem; }
+  .split p, .split-2 p { font-size: 0.95rem; }
+
+  /* process -> vertical stacking */
+  .feature-cards-2 { flex-direction: column; gap: 1rem; padding-top: 20px; }
+  .feature-cards-2 .card { width: 100%; }
+
+  /* testimonials -> vertical */
+  .testimonials-section { flex-direction: column; gap: 1rem; padding: 1.5rem 1rem; }
+  .testimonial-card.featured {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+  .testimonial-card { width: 100%; }
+
+  /* FAQ padding */
+  .faq-grid { padding-inline: 0.75rem; }
+
+  /* footer -> stack columns */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding-inline: 1rem;
+  }
+  .footer-col { width: 100%; text-align: center; min-width: unset; }
+  .download img { width: 120px; display: inline-block; margin: 0.5rem auto; }
+  .footer-bottom { padding: 18px 0 30px; }
+}
+
+/* -----------------------
+   Helper fixes
+   ----------------------- */
+img { max-width: 100%; height: auto; display: block; }
+
+@media (max-width: 600px) {
+  .nav-item a, .login-btn, .get-started, .btn, .contact-btn {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
 }
