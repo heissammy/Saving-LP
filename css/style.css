@@ -278,7 +278,7 @@ ul.nav-item {
 }
 
 .split ul {
-  margin: 0 0 20px 20px;
+  margin: 0 0 5px 20px;
   color: #444;
 
 
@@ -1105,7 +1105,6 @@ li::marker {
     gap: 0.5rem;
     background-color: #0e4023;
     padding: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .logo {
@@ -1239,10 +1238,11 @@ li::marker {
   .split h3,
   .split-2 h3 {
     display: flex;
-    justify-content: center;
     width: 100%;
+    padding-right: 0;
     font-size: 1.25rem;
     line-height: 1.6rem;
+    padding-bottom: 20px;
   }
 
   .split p,
@@ -1250,8 +1250,10 @@ li::marker {
     font-size: 0.95rem;
     padding-right: 3rem;
     display: flex;
+    padding-right: 0;
     width: auto;
     justify-content: center;
+    padding-bottom: 30px;
   }
 
   /* process -> vertical stacking */
@@ -1259,6 +1261,7 @@ li::marker {
     flex-direction: column;
     gap: 1rem;
     padding-top: 20px;
+    padding-inline: 1rem;
   }
 
   .feature-cards-2 .card {
